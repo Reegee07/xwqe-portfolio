@@ -170,6 +170,7 @@ header .shell{display:flex;align-items:center;justify-content:space-between;gap:
 .partners .lbl{margin-bottom:.75rem;font-size:.75rem;font-weight:500;color:rgba(17,17,17,.45);text-align:left}
 @media (min-width:1024px){.partners .lbl{text-align:right}}
 .partners ul{display:grid;grid-template-columns:repeat(4,1fr);column-gap:1rem;row-gap:.75rem}
+.partners a{text-decoration:none}
 .partners .h-lift{display:flex;align-items:center;gap:.375rem;font-size:.75rem;color:rgba(17,17,17,.7);opacity:.7}
 .partners .icon{font-size:.875rem;color:rgba(17,17,17,.4)}
 .status-bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;border-top:1px solid rgba(17,17,17,.1);padding:1.25rem;font-size:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:.025em;color:rgba(17,17,17,.6);position:relative;z-index:20}
@@ -251,6 +252,11 @@ header .shell{display:flex;align-items:center;justify-content:space-between;gap:
 .work-card .meta{display:flex;justify-content:space-between;font-size:.75rem;text-transform:uppercase;letter-spacing:.025em;color:rgba(255,255,255,.45)}
 .work-card .badge{width:2.75rem;height:2.75rem;display:grid;place-items:center;border-radius:9999px;background:rgba(255,255,255,.1);color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.15);transition:transform .35s var(--ease-snap)}
 @media (hover:hover){.work-card:hover .badge{transform:rotate(45deg) scale(1.08)}}
+.work-card .wc-media{position:absolute;inset:0}
+.work-card .wc-media video{width:100%;height:100%;object-fit:cover;display:block}
+.work-card .wc-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.12) 30%,rgba(10,10,10,.88) 100%)}
+.work-card .meta{position:relative;z-index:1}
+.work-card .btm{z-index:1}
 .work-card .wm{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
 .work-card .wm .icon{font-size:4.5rem;color:rgba(255,255,255,.9)}
 .work-card .wm sup{font-size:.75rem;color:rgba(255,255,255,.6)}
@@ -318,9 +324,9 @@ footer .shell{position:relative;z-index:10;padding:5rem 1.25rem 2.5rem}
 .f-brand p{max-width:20rem;font-size:.875rem;color:rgba(255,255,255,.55)}
 .f-col h4{font-size:.75rem;text-transform:uppercase;letter-spacing:.025em;color:rgba(255,255,255,.4);margin-bottom:1rem}
 .f-col ul{display:flex;flex-direction:column;gap:.75rem}
-.f-col a{font-size:.875rem;display:inline-flex}
-.f-col a span{opacity:.65;transition:transform .3s var(--ease-snap),opacity .3s var(--ease-snap)}
-@media (hover:hover){.f-col a:hover span{transform:translateX(4px);opacity:1}}
+.f-col a,.f-col button{font-size:.875rem;display:inline-flex;text-align:left}
+.f-col a span,.f-col button span{opacity:.65;transition:transform .3s var(--ease-snap),opacity .3s var(--ease-snap)}
+@media (hover:hover){.f-col a:hover span,.f-col button:hover span{transform:translateX(4px);opacity:1}}
 .f-legal{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:1rem;border-top:1px solid rgba(255,255,255,.1);padding-top:2rem;font-size:.75rem;color:rgba(255,255,255,.45)}
 @media (min-width:640px){.f-legal{flex-direction:row}}
 .f-legal .links{display:flex;gap:1.5rem}
@@ -475,15 +481,15 @@ footer .shell{position:relative;z-index:10;padding:5rem 1.25rem 2.5rem}
           </div>
         </div>
         <div class="partners rv" style="--d:550ms">
-          <div class="lbl">Trusted by</div>
+          <div class="lbl">Featured cuts</div>
           <ul>
-            <li><span class="h-lift"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>Nightdrive</span></li>
-            <li><span class="h-lift"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>Pulsewave</span></li>
-            <li><span class="h-lift"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>VHS Club</span></li>
-            <li><span class="h-lift"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>Orbit</span></li>
-            <li><span class="h-lift"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>Framecraft</span></li>
-            <li><span class="h-lift"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>Neonlab</span></li>
-            <li><span class="h-lift"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>Kiosk</span></li>
+            <li><a class="h-lift" href="https://t.me/xwqePortf/39" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>BANDIT</a></li>
+            <li><a class="h-lift" href="https://t.me/xwqePortf/4" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>UGLYSTEPHAN</a></li>
+            <li><a class="h-lift" href="https://t.me/xwqePortf/9" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>Ne Luna</a></li>
+            <li><a class="h-lift" href="https://t.me/xwqePortf/7" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>ARCANE</a></li>
+            <li><a class="h-lift" href="https://t.me/xwqePortf/40" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>New York</a></li>
+            <li><a class="h-lift" href="https://t.me/xwqePortf/46" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>UI Motion</a></li>
+            <li><a class="h-lift" href="https://t.me/xwqePortf" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/></svg>More on TG</a></li>
           </ul>
         </div>
       </div>
@@ -540,40 +546,58 @@ footer .shell{position:relative;z-index:10;padding:5rem 1.25rem 2.5rem}
         <h2><span class="line-rv" style="--d:120ms"><span>Selected Work</span></span></h2>
       </div>
       <ul class="works-grid">
-        <li class="rv" style="--d:0ms"><a class="work-card" href="https://t.me/xwqePortf" target="_blank" rel="noopener">
+        <li class="rv" style="--d:0ms"><a class="work-card has-media" href="https://t.me/xwqePortf/39" target="_blank" rel="noopener">
+          <div class="wc-media"><video muted loop playsinline preload="none" poster="assets/work/bandit.jpg" data-src="assets/work/bandit.mp4"></video></div>
+          <div class="meta"><span>Lyric Video — 2025</span><span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+          <div class="btm">
+            <h3>Don Toliver — BANDIT</h3>
+            <p>Kinetic lyric video — beat-synced type and a 3D-tracked device.</p>
+            <div class="tags"><span class="chip">Lyric</span><span class="chip">SFX</span><span class="chip">3D</span></div>
+          </div>
+        </a></li>
+        <li class="rv" style="--d:90ms"><a class="work-card has-media" href="https://t.me/xwqePortf/4" target="_blank" rel="noopener">
+          <div class="wc-media"><video muted loop playsinline preload="none" poster="assets/work/uglystephan.jpg" data-src="assets/work/uglystephan.mp4"></video></div>
           <div class="meta"><span>Music Video — 2025</span><span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          <div class="wm"><span><svg class="icon" viewBox="0 0 48 48" fill="currentColor"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"/></svg><sup>®</sup></span></div>
           <div class="btm">
-            <h3>Neon Drift</h3>
-            <p>A high-energy performance cut — beat-synced edits, heavy grain grade, and analog VHS textures.</p>
-            <div class="tags"><span class="chip">Editing</span><span class="chip">Color Grade</span><span class="chip">VFX</span></div>
+            <h3>ПСИХУШКА × UGLYSTEPHAN</h3>
+            <p>Music video edit with liquid-neon 3D transitions and heavy grade.</p>
+            <div class="tags"><span class="chip">Editing</span><span class="chip">VFX</span><span class="chip">Color</span></div>
           </div>
         </a></li>
-        <li class="rv" style="--d:90ms"><a class="work-card" href="https://t.me/xwqePortf" target="_blank" rel="noopener">
-          <div class="meta"><span>YouTube — 2024</span><span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          <div class="wm"><span><svg class="icon" viewBox="0 0 48 48" fill="currentColor"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"/></svg><sup>®</sup></span></div>
+        <li class="rv" style="--d:180ms"><a class="work-card has-media" href="https://t.me/xwqePortf/9" target="_blank" rel="noopener">
+          <div class="wc-media"><video muted loop playsinline preload="none" poster="assets/work/ne-luna.jpg" data-src="assets/work/ne-luna.mp4"></video></div>
+          <div class="meta"><span>Kinetic Type — 2025</span><span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
           <div class="btm">
-            <h3>Retention Lab</h3>
-            <p>A full editing system for a growing channel — hooks, pacing, motion graphics, and sound design.</p>
-            <div class="tags"><span class="chip">Long-form</span><span class="chip">Motion Design</span><span class="chip">Sound</span></div>
+            <h3>Милиан О’Войд — Ты не луна, ты пожар</h3>
+            <p>Kinetic typography lyric video, cut to the vocal.</p>
+            <div class="tags"><span class="chip">Type</span><span class="chip">Lyric</span><span class="chip">Pacing</span></div>
           </div>
         </a></li>
-        <li class="rv" style="--d:180ms"><a class="work-card" href="https://t.me/xwqePortf" target="_blank" rel="noopener">
-          <div class="meta"><span>Commercial — 2024</span><span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          <div class="wm"><span><svg class="icon" viewBox="0 0 48 48" fill="currentColor"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"/></svg><sup>®</sup></span></div>
+        <li class="rv" style="--d:270ms"><a class="work-card has-media" href="https://t.me/xwqePortf/7" target="_blank" rel="noopener">
+          <div class="wc-media"><video muted loop playsinline preload="none" poster="assets/work/arcane.jpg" data-src="assets/work/arcane.mp4"></video></div>
+          <div class="meta"><span>Anime Edit — 2025</span><span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
           <div class="btm">
-            <h3>Velvet Static</h3>
-            <p>A 30-second product spot — cinematic grade, macro cuts, and a sound mix built for the scroll.</p>
-            <div class="tags"><span class="chip">Commercial</span><span class="chip">Color</span><span class="chip">Sound Design</span></div>
+            <h3>ARCANE — Season 2</h3>
+            <p>Cinematic anime edit — pacing, SFX, and a moody grade.</p>
+            <div class="tags"><span class="chip">Editing</span><span class="chip">SFX</span><span class="chip">Color</span></div>
           </div>
         </a></li>
-        <li class="rv" style="--d:270ms"><a class="work-card" href="https://t.me/xwqePortf" target="_blank" rel="noopener">
-          <div class="meta"><span>Shorts — 2023</span><span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-          <div class="wm"><span><svg class="icon" viewBox="0 0 48 48" fill="currentColor"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"/></svg><sup>®</sup></span></div>
+        <li class="rv" style="--d:0ms"><a class="work-card has-media" href="https://t.me/xwqePortf/40" target="_blank" rel="noopener">
+          <div class="wc-media"><video muted loop playsinline preload="none" poster="assets/work/new-york.jpg" data-src="assets/work/new-york.mp4"></video></div>
+          <div class="meta"><span>SFX Edit — 2025</span><span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
           <div class="btm">
-            <h3>Pocket Stories</h3>
-            <p>A vertical content pipeline — 90+ shorts cut for TikTok, Reels, and YouTube with subtitle systems.</p>
-            <div class="tags"><span class="chip">Shorts</span><span class="chip">Subtitles</span><span class="chip">Pacing</span></div>
+            <h3>JAY-Z — Empire State Of Mind</h3>
+            <p>SFX-driven lyric piece — type, glow, and motion trails.</p>
+            <div class="tags"><span class="chip">SFX</span><span class="chip">Type</span><span class="chip">Motion</span></div>
+          </div>
+        </a></li>
+        <li class="rv" style="--d:90ms"><a class="work-card has-media" href="https://t.me/xwqePortf/46" target="_blank" rel="noopener">
+          <div class="wc-media"><video muted loop playsinline preload="none" poster="assets/work/ui-motion.jpg" data-src="assets/work/ui-motion.mp4"></video></div>
+          <div class="meta"><span>UI Motion — 2025</span><span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+          <div class="btm">
+            <h3>UI Animation</h3>
+            <p>Product-style interface motion with an AI-generated voiceover.</p>
+            <div class="tags"><span class="chip">Motion</span><span class="chip">UI</span><span class="chip">Sound</span></div>
           </div>
         </a></li>
       </ul>
@@ -589,26 +613,26 @@ footer .shell{position:relative;z-index:10;padding:5rem 1.25rem 2.5rem}
       <span class="eyebrow rv">Services</span>
       <h2><span class="line-rv" style="--d:120ms"><span>What I do best</span></span></h2>
       <ul>
-        <li class="svc-row-wrap rv" style="--d:0ms"><a href="#" class="svc-row">
+        <li class="svc-row-wrap rv" style="--d:0ms"><button type="button" class="svc-row" data-modal>
           <span class="idx">01</span><h3>Video Editing</h3>
           <p class="desc">Narrative-driven cuts for YouTube, ads, and music videos.</p>
           <span class="go"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-        </a></li>
-        <li class="svc-row-wrap rv" style="--d:80ms"><a href="#" class="svc-row">
+        </button></li>
+        <li class="svc-row-wrap rv" style="--d:80ms"><button type="button" class="svc-row" data-modal>
           <span class="idx">02</span><h3>Color Grading</h3>
           <p class="desc">Cinematic grades that set the exact mood of every frame.</p>
           <span class="go"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-        </a></li>
-        <li class="svc-row-wrap rv" style="--d:160ms"><a href="#" class="svc-row">
+        </button></li>
+        <li class="svc-row-wrap rv" style="--d:160ms"><button type="button" class="svc-row" data-modal>
           <span class="idx">03</span><h3>Motion Design</h3>
           <p class="desc">Titles, captions, and graphics that move with the story.</p>
           <span class="go"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-        </a></li>
-        <li class="svc-row-wrap rv" style="--d:240ms"><a href="#" class="svc-row">
+        </button></li>
+        <li class="svc-row-wrap rv" style="--d:240ms"><button type="button" class="svc-row" data-modal>
           <span class="idx">04</span><h3>Sound Design</h3>
           <p class="desc">Mixes, SFX, and music sync that complete the picture.</p>
           <span class="go"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-        </a></li>
+        </button></li>
       </ul>
     </div>
   </section>
@@ -651,16 +675,16 @@ footer .shell{position:relative;z-index:10;padding:5rem 1.25rem 2.5rem}
           <li><a href="#about"><span>About</span></a></li>
           <li><a href="#works"><span>Showreel</span></a></li>
           <li><a href="#services"><span>Process</span></a></li>
-          <li><a href="#contact"><span>Contact</span></a></li>
+          <li><button type="button" data-modal><span>Contact</span></button></li>
         </ul>
       </div>
       <div class="f-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#editing"><span>Video Editing</span></a></li>
-          <li><a href="#grading"><span>Color Grading</span></a></li>
-          <li><a href="#motion"><span>Motion Design</span></a></li>
-          <li><a href="#sound"><span>Sound Design</span></a></li>
+          <li><a href="#services"><span>Video Editing</span></a></li>
+          <li><a href="#services"><span>Color Grading</span></a></li>
+          <li><a href="#services"><span>Motion Design</span></a></li>
+          <li><a href="#services"><span>Sound Design</span></a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -673,7 +697,7 @@ footer .shell{position:relative;z-index:10;padding:5rem 1.25rem 2.5rem}
     </div>
     <div class="f-legal">
       <span>© 2026 xwqe. All rights reserved.</span>
-      <span class="links"><a href="#privacy"><span>Privacy</span></a><a href="#terms"><span>Terms</span></a></span>
+      <span class="links"><a href="mailto:mlg.sinev@gmail.com"><span>Email</span></a><a href="https://t.me/xwqeee" target="_blank" rel="noopener"><span>Telegram</span></a></span>
     </div>
   </div>
   <div class="f-wm">XWQE</div>
@@ -1011,6 +1035,18 @@ document.querySelectorAll('[data-scroll]').forEach(b=>b.addEventListener('click'
   if (navmenu.classList.contains('open')) closeMenu();
   scrollToId(b.dataset.scroll);
 }));
+</script>
+<script>
+(() => {
+  const vids = document.querySelectorAll('.wc-media video');
+  if (!vids.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { if (!v.src) v.src = v.dataset.src; v.play().catch(() => {}); }
+    else v.pause();
+  }), {rootMargin: '120px'});
+  vids.forEach(v => io.observe(v));
+})();
 </script>
 </body>
 </html>
