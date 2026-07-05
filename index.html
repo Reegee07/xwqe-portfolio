@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>xwqe — Portfolio</title>
+<meta name="description" content="xwqe — independent video editor. Three concept sites: studio landing, cinematic manifesto, and a one-screen hero.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a0a0a'/><text x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23cf8047'>x</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://reegee07.github.io/xwqe-portfolio/">
+<meta property="og:title" content="xwqe — Portfolio">
+<meta property="og:description" content="Independent video editor. Three concept sites: studio landing, cinematic manifesto, and a one-screen hero.">
+<meta property="og:image" content="https://reegee07.github.io/xwqe-portfolio/assets/og/hub.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0a0a;color:#fff;font-family:'Onest',sans-serif;min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none}
+.top{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2rem}
+.brand{display:flex;align-items:center;gap:.5rem;font-weight:600;font-size:1.125rem;letter-spacing:-.01em}
+.brand svg{width:1.25rem;height:1.25rem;color:#cf8047}
+.top .tag{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:rgba(255,255,255,.45)}
+.hero{text-align:center;padding:4rem 1.5rem 3rem}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:600;letter-spacing:-.02em;line-height:1.05}
+.hero p{margin-top:1rem;font-size:.95rem;color:rgba(255,255,255,.55);max-width:44ch;margin-inline:auto}
+.cards{flex:1;display:grid;grid-template-columns:1fr;gap:1rem;padding:1rem 2rem 3rem;max-width:80rem;margin-inline:auto;width:100%}
+@media(min-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:20rem;border-radius:1.5rem;padding:1.75rem;overflow:hidden;border:1px solid rgba(255,255,255,.1);transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.3)}
+.card .num{font-size:.75rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em}
+.card h2{font-size:1.75rem;font-weight:600;letter-spacing:-.01em;margin-top:.5rem}
+.card p{margin-top:.75rem;font-size:.875rem;line-height:1.6;color:rgba(255,255,255,.6)}
+.card .go{margin-top:1.5rem;display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+.card .go span{transition:transform .3s}
+.card:hover .go span{transform:translateX(4px)}
+.card.c1{background:linear-gradient(160deg,#f1f0ee, #c9c9c9);color:#111;border-color:transparent}
+.card.c1 .num{color:rgba(17,17,17,.4)}
+.card.c1 p{color:rgba(17,17,17,.6)}
+.card.c1 .accent{color:#b15f2c}
+.card.c2{background:radial-gradient(120% 120% at 30% 20%, #2a1608 0%, #0a0503 55%, #000 100%)}
+.card.c2 .accent{color:#cf8047}
+.card.c3{background:#000}
+.card.c3 .accent{color:#39FF14}
+.card.c3 h2{font-family:'Onest',sans-serif}
+footer{padding:1.5rem 2rem;display:flex;justify-content:space-between;font-size:.75rem;color:rgba(255,255,255,.4);border-top:1px solid rgba(255,255,255,.08)}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="brand"><svg viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"/></svg>xwqe</div>
+  <span class="tag">Video Editing Portfolio</span>
+</div>
+<div class="hero">
+  <h1>Three sites.<br>One editor.</h1>
+  <p>Concept landings built around one craft — video editing. Pick a direction: clean studio, cinematic manifesto, or a single bold screen.</p>
+</div>
+<div class="cards">
+  <a class="card c1" href="lumora/index.html">
+    <div><div class="num">01 — Studio</div><h2>xwqe studio</h2><p>Light editorial landing: liquid cursor-reveal hero, services, selected work, and stats. The full-service front door.</p></div>
+    <div class="go accent">Open <span>→</span></div>
+  </a>
+  <a class="card c2" href="laocoon/index.html">
+    <div><div class="num">02 — Manifesto</div><h2>Cut and Time</h2><p>Cinematic WebGL scene with a 360° camera orbit, forge sparks, and a liquid-bronze shader. Editing as sculpture.</p></div>
+    <div class="go accent">Open <span>→</span></div>
+  </a>
+  <a class="card c3" href="loopstack/index.html">
+    <div><div class="num">03 — One Screen</div><h2>xwqe hero</h2><p>Single non-scrolling screen: video background, giant wordmark, neon accent, and a custom “Say Hello!” cursor.</p></div>
+    <div class="go accent">Open <span>→</span></div>
+  </a>
+</div>
+<footer><span>© 2026 xwqe</span><span>Cut. Grade. Deliver.</span></footer>
+</body>
+</html>
