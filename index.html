@@ -27,7 +27,7 @@ a{color:inherit;text-decoration:none}
 .hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:600;letter-spacing:-.02em;line-height:1.05}
 .hero p{margin-top:1rem;font-size:.95rem;color:rgba(255,255,255,.55);max-width:44ch;margin-inline:auto}
 .cards{flex:1;display:grid;grid-template-columns:1fr;gap:1rem;padding:1rem 2rem 3rem;max-width:80rem;margin-inline:auto;width:100%}
-@media(min-width:900px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
 .card{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:20rem;border-radius:1.5rem;padding:1.75rem;overflow:hidden;border:1px solid rgba(255,255,255,.1);transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s}
 .card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.3)}
 .card .num{font-size:.75rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em}
@@ -45,6 +45,10 @@ a{color:inherit;text-decoration:none}
 .card.c3{background:#000}
 .card.c3 .accent{color:#39FF14}
 .card.c3 h2{font-family:'Onest',sans-serif}
+.card.c4{background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,.84)),url("assets/og/tatsuo.png") center/cover;color:#fff}
+.card.c4 .num{color:rgba(255,255,255,.62)}
+.card.c4 p{color:rgba(255,255,255,.76)}
+.card.c4 .accent{color:#fff}
 footer{padding:1.5rem 2rem;display:flex;justify-content:space-between;font-size:.75rem;color:rgba(255,255,255,.4);border-top:1px solid rgba(255,255,255,.08)}
 .inquiry{padding:3.5rem 2rem 4rem;max-width:80rem;margin-inline:auto;width:100%}
 .inquiry .i-head{text-align:center;max-width:58ch;margin-inline:auto}
@@ -69,8 +73,8 @@ footer{padding:1.5rem 2rem;display:flex;justify-content:space-between;font-size:
   <span class="tag">Web &amp; Mobile Portfolio</span>
 </div>
 <div class="hero">
-  <h1>Three web concepts.<br>One builder.</h1>
-  <p>Concept landings built around one craft — sharp digital presentation. Pick a direction: clean studio, cinematic manifesto, or a single bold screen.</p>
+  <h1>Four web concepts.<br>One builder.</h1>
+  <p>Concept landings built around one craft — sharp digital presentation. Pick a direction: clean studio, cinematic manifesto, a single bold screen, or an interactive photo archive.</p>
 </div>
 <div class="cards">
   <a class="card c1" href="lumora/index.html?v=starfix">
@@ -83,6 +87,10 @@ footer{padding:1.5rem 2rem;display:flex;justify-content:space-between;font-size:
   </a>
   <a class="card c3" href="loopstack/index.html">
     <div><div class="num">03 — One Screen</div><h2>xwqe hero</h2><p>Single non-scrolling screen: video background, giant wordmark, neon accent, and a custom “Say Hello!” cursor.</p></div>
+    <div class="go accent">Open <span>→</span></div>
+  </a>
+  <a class="card c4" href="tatsuo/">
+    <div><div class="num">04 — Photo Archive</div><h2>Tatsuo Suzuki</h2><p>Editorial photography portfolio with a 3D image wheel, WebGL text dissolve, scroll choreography, and cinematic project transitions.</p></div>
     <div class="go accent">Open <span>→</span></div>
   </a>
 </div>
